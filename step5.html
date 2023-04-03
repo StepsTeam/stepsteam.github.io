@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<title>StepsTeam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/w3.css">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<body>
+
+<!-- Header Bar -->
+<div class="w3-top">
+<div class="w3-bar w3-white w3-card w3-left w3-cell-middle" style="display:flex; align-items:center; height:70px">
+<a href="index.html" style="margin-right: auto;"><img src="image/logo.png" alt="Logo" style="max-width:75%"></a>
+<a href="contact.html" style="vertical-align:middle">Contact</a>&nbsp;&nbsp;
+</div>
+</div>
+
+<!-- The Main Body -->
+<div class="w3-container w3-content w3-padding-64" style="margin-top:10px">
+<div style="text-align: center;">
+<h1><span style="color:#73a241;"><b>STEP 5: Optimize</b></span></h1>
+</div>
+
+<h1><span style="color:#73a241;"><b>What</b></span></h1>
+<p align="justify">In Step 5, a statistician trains your trading robot to make the most profit. The trading robot has parameters that define when the robot will trade. Numerous simulation tests will be run in a virtual laboratory.</p>
+<hr>
+
+<h1><span style="color:#73a241;"><b>Why</b></span></h1>
+<p align="justify">To learn what values each parameter should be set at to make the most profit. When Step 5 is complete, it will help prove the strategy defined in <a href="step2.html">Step 2</a> is profitable. It also stresses the computer program to make sure it was coded correctly in <a href="step2.html">Step 3</a>.</p>
+<hr>
+
+<h1><span style="color:#73a241;"><b>How</b></span></h1>
+<p><b>Run Simulation Tests</b></p>
+<p align="justify">Your trading robot will be tested using both historical and synthetic data as described in <a href="step2.html">Step 4</a>. That entails running simulations to help determine the optimal value for each parameter. Once the testing process is complete you will receive a statistical analysis that describes the testing methodology and findings.</p>
+
+<p><b>Optimize the Parameters</b></p>
+<p align="justify">Your trading robot has a strategy that has parameters that are used to tune the trading rules.  A series of optimization tests will be conducted to help determine the optimal settings for the parameters. The testing is carried out by simulating time travel. As your trading robot "travels through time", it is exposed to a stream of financial data. The trading robot will decide when to buy and sell (and the pair of trades will have an associated profit or loss). The accumulation of this profit/loss over the test duration will indicate the total profit and loss. A statistical analysis and optimization will be performed in an effort to train your trading robot to profit consistently. It is important to remember that simulation testing does not guarantee that your robot will be profitable. However, if the trading robot cannot profit during simulation testing, it is very unlikely to profit in the future.</p>
+
+<p><b>Avoid Optimization Bias</b></p>
+<p align="justify">Optimization bias is hard to eliminate as algorithmic strategies often involve many parameters. "Parameters", also called features, in this instance might be the entry/exit criteria, look-back periods, averaging periods (i.e the moving average smoothing parameter) or volatility measurement frequency. Optimization bias can be minimized by keeping the number of parameters to a minimum and increasing the quantity of data points in the training set. One method to help mitigate this bias is to perform a sensitivity analysis. This means varying the parameters incrementally and plotting a “surface” of performance. Sound, fundamental reasoning for parameter choices should, with all other factors considered, lead to a smoother parameter surface.</p>
+
+<p><b>Avoid Look-Ahead Bias</b></p>
+<p align="justify">This bias is created by the use of information or data in a study or simulation that would not have been known or available during the period being analyzed. A common example of look-ahead bias occurs when calculating optimal strategy parameters, such as with linear regressions between two time series. If the whole data set (including future data) is used to calculate the regression coefficients, and thus retroactively applied to a trading strategy for optimisation purposes, then future data is being incorporated and a look-ahead bias exists. Certain trading strategies make use of extreme values in any time period, such as incorporating the high or low prices in open high low close (OHLC) data. However, since these maximal/minimal values can only be calculated at the end of a time period, a look-ahead bias is introduced if these values are used during the current period. It is always necessary to lag high/low values by at least one period in any trading strategy making use of them.</p>
+
+<p><b>Avoid Survivorship Bias</b></p>
+<p align="justify">This bias occurs when strategies are tested on datasets that do not include the full universe of prior assets that may have been chosen at a particular point in time, but only consider those that have “survived” to the current time. In the case of equity data it is possible to purchase datasets that include delisted entities, although they are not cheap and only tend to be utilized by institutional firms. In particular, Yahoo Finance data is NOT survivorship bias free, and this is commonly used by many retail algorithmic traders. Utilizing a more recent data set mitigates the possibility that the stock selection chosen is weighted to “survivors”, simply as there is less likelihood of overall stock delisting in shorter time periods.</p>
+
+<p><b>Avoid Overfitting</b></p>
+<p align="justify">StepsTeam avoids overfitting by using cross validation. Cross validation carves up the training data into multiple manifolds, and uses different sub-groupings of these manifolds to alternatively train and test the strategies. This helps in selecting the best trading approach from a pool of possible strategies. For creating the manifolds, we use in sample historical data, out of sample historical data, and also live data and two types of simulated data.</p>
+
+<p><b>Achieve Performance</b></p>
+<p align="justify">StepsTeam verifies that the strategy will meet or exceed the following performance metrics before passing Step 5.</p>
+
+<ol>
+<li><b>Annual Return</b><br>
+The yearly return must be greater than 7%.</li>
+<li><b>Annual Volatility</b><br>
+The volatility must be less than 30%</li>
+<li><b>Sharpe Ratio</b><br>
+The Annual Return divided by the Annual Volatility must be greater than 0.6.</li>
+<li><b>Maximum Drawdown</b><br>
+The greatest loss suffered from a peak in equity to its subsequent trough must not exceed -30%.</li>
+<li><b>Calmer Ratio</b><br>
+The Annual Return divided by the Maximum Drawdown must be greater than 0.5.</li>
+<li><b>Stability of Returns</b><br>
+The R-squared value must be greater than 0.5.</li>
+</ol>
+
+<p>If the performance does not meet these standards, the strategy is rejected and the research and development process restarts at <a href="step2.html">Step 2</a>.</p>
+<hr>
+
+<h1><span style="color:#73a241;"><b>When</b></span></h1>
+<p align="justify">When this step is completed, you will receive a statistical analysis that will be included in the due diligence documents. It will include the testing methodology as well as the performance metrics. The report will also contain the optimal parameter settings that can be used to yield the highest amount of profit (with less regard for risk).</p>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-bottom w3-center w3-border-top w3-opacity w3-white w3-xlarge">
+<div style="text-align: center;">
+<table style="width: 100%;">
+<tr>
+<td style="text-align: left;"><a href="step4.html" style="text-decoration:none;white-space:nowrap"><h3>&lt; back</h3></a></td>
+<td style="text-align: center;"><p class="w3-medium">Copyright 2023</p></td>
+<td style="text-align: right;"><a href="step6.html" style="text-decoration:none;white-space:nowrap"><h3>next &gt;</h3></a></td>
+</tr>
+</table>
+</div>
+</footer>
+</body>
+</html>

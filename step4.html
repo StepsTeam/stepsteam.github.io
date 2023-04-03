@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<title>StepsTeam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/w3.css">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<body>
+
+<!-- Header Bar -->
+<div class="w3-top">
+<div class="w3-bar w3-white w3-card w3-left w3-cell-middle" style="display:flex; align-items:center; height:70px">
+<a href="index.html" style="margin-right: auto;"><img src="image/logo.png" alt="Logo" style="max-width:75%"></a>
+<a href="contact.html" style="vertical-align:middle">Contact</a>&nbsp;&nbsp;
+</div>
+</div>
+
+<!-- The Main Body -->
+<div class="w3-container w3-content w3-padding-64" style="margin-top:10px">
+<div style="text-align: center;">
+<h1><span style="color:#73a241;"><b>STEP 4: Data</b></span></h1>
+</div>
+
+<h1><span style="color:#73a241;"><b>What</b></span></h1>
+<p align="justify">In Step 4, four different types of data are provided for the research and development process: Random-Walk Data, Simulated Quote Data, Curated Historical Data, and Real Time Trading Data.</p>
+<hr>
+
+<h1><span style="color:#73a241;"><b>Why</b></span></h1>
+<p><b>The market changes</b></p>
+<p align="justify">Testing the algorithm with various sets of data gives an indication of how profitable the trading robot will be in different market conditions. If the trading robot can profit using different market conditions, it is said to be “robust”. By testing the strategy over various types of data, it can help prove that the strategy is robust. Even as the market changes, the trading robot will still be able to profit. It also stress tests the strategy to prove that the developer programmed the strategy correctly during Step 3.</p>
+
+<p><b>Prices may be unpredictable</b></p>
+<p align="justify">Humans have an innate ability to recognize patterns - <i>even where they don't exist</i>. While this has been a pivotal skill to help us evolve and progress as a species, there are times when relying perceived patterns can result in a negative outcome. Many traders look for patterns in historical prices and trade solely on the faith that the patterns will repeat themselves in the future.</p>
+
+<p align="justify">In 1973, Burton Malkiel (who was economics professor at Princeton University) wrote a book about random-walk theory called “A Random Walk Down Wall Street”.  Random walk theory is the concept that stock prices evolve according to a random walk and are therefore unpredictable. In short, it is the basic idea that no one can predict the future prices of stocks.</p>
+
+<p align="justify">Here are several studies show that stock price movement is unpredictable.  The reason prices can be unpredictable is because of the law of supply and demand. As human and robotic traders buy a stock, the price increases. As they sell, the price decreases. Each trader buys or sells for different reasons.</p>
+
+<p>Here are common events that affect stock prices:</p>
+<ol>
+<li>An unrelated large cap stock has an earnings report. An investor makes a large investment in the related sector ETF.</li>
+<li>Other traders recognized the same price pattern and place the trades before you.</li>
+<li>A high speed computer sees your trade and executes orders before you.</li>
+<li>High speed computers and traders place orders and cancel them to manipulate the price.</li>
+<li>Unexpected negative news (like an accident or scandal) is released about the company.</li>
+<li>Another unexpected event happens on the following day and more news is released.</li>
+<li>Paid advertisers post in online forums to manipulate the price for their employers.</li>
+<li>High frequency trading systems and and scalp traders buy and sell in under one minute.</li>
+<li>Day traders buy and sell during the day and close their positions at the end of the day.</li>
+<li>Swing traders hold their positions for as long as it takes to reach an exit price.</li>
+<li>Position traders buy and sell at random times from weeks to months.</li>
+<li>The price moves while trading is halted due to the price moving too quickly.</li>
+<li>News about the stock is released at random and unpredictable times.</li>
+<li>Regulations prevent traders from making enough trades to follow their strategy closely.</li>
+<li>The federal reserve chairman says something that upsets investors.</li>
+<li>An ETF or mutual fund that includes the stock is created or dissolved.</li>
+<li>A commentator or analyst changes their sentiment about the stock.</li>
+</ol>
+<p>All of these events can happen simultaneously causing the price to fluctuate in an unpredictable fashion.</p>
+<hr>
+
+<h1><span style="color:#73a241;"><b>How</b></span></h1>
+<p><b>Random Walk Data</b></p>
+<p align="justify">StepsTeam generates pseudorandom data and tests the trading strategy. A starting price is set for each symbol at the beginning of the simulation. As the simulation progresses through time, a virtual coin is flipped. If the virtual coin lands on heads, the price is increased. If the virtual coin lands on tails, the price is decreased. Also, a virtual die is rolled. Whatever number comes up (between 1 and 6) is how many cents the price is moved. Finally, the direction and amount of movement is applied to the previous price. This process is repeated over and over for each individual stock in the portfolio. It guarantees that the stock prices move in a very unpredictable way. Studies show that while prices move randomly, there is a subtle upward drift in the price over time.  The reason stock prices increase is because employees at the company work hard to improve the value of the company stock. Another reason is that dividends and profits are often reinvested. As a conservative measure, the pseudorandom data used does not include the upward drift. Trading commissions, SEC fees, and slippage are factored in.</p>
+
+<p><b>Simulated Quote Data</b></p>
+<p>The simulated data has fat tails. </p>
+
+<p><b>Curated Historical Data</b></p>
+<p align="justify">Bad data leads to bad decisions. A common problem in the trading community is the use of bad data during the statistical optimization testing. The bad data leads to inaccurate trading simulation test results. StepsTeam uses professionally curated data that is acquired from a third party company. The dataset has undergone numerous rigorous checks and data quality is monitored daily by a dedicated data quality assessment team. The data is also reviewed by many professionals and is research ready.</p>
+
+<p><b>Survivorship Bias</b></p>
+<p align="justify">Some data sources fail to include stock and ETF symbols that no longer exist. When running simulations it is important to include symbols that no longer exist or the test results will be skewed to the upside. For example, if a test portfolio may be built to include all stocks from $0.50 to $0.60. After the test is run the results will look very positive because it fails to account for the fact that the companies that went to $0 are not included. Without the complete data set, the algorithm would be be blind to the possibility of bankruptcy and the resulting losses. An IndexUniverse data analysis reveals that 22 percent of all ETFs currently trading in the U.S. are at high risk of closure.  ETFs that have been delisted are included as well.</p>
+
+<p><b>Adjusted for Splits</b></p>
+<p align="justify">When a stock split occurs, the data is adjusted to reflect this so that the data is more or less continuous. If the stock price is 20 and then a 2:1 split occurs, bringing the price to 10, all data before the split date is divided by 2. The split factor data column is then multiplied by 2. The data thus reflects how much money an investor would expect to make by investing at the beginning of a period and selling at the end of the period without having to take split discontinuities into account.</p>
+
+<p><b>Adjusted for dividends</b></p>
+<p align="justify">When a dividend occurs, the data is similarly adjusted in the past to be more or less continuous. Dividends are paid to all shareholders on record at the close of regular markets on the day before the ex-dividend day (The day before the ex-dividend date is also referred to as the Record Date in some literature). Thus, all shares purchased on the ex-dividend day are not entitled to the dividend payout. Because of this, share prices will typically drop by the amount of the dividend on the ex-dividend date. However, this does not represent a loss of equity because the owner of the stock during this period would receive a dividend payment to compensate for this drop. In effect, the shareholder sees no profit or loss due to dividends. For this reason, a dividend adjustment is applied to keep prices continuous when a dividend is paid.</p>
+
+<p><b>Suspicious Quote Detection</b></p>
+<p align="justify">A proprietary feed handler employs sophisticated algorithms to flag quotes as suspicious. In general, a suspicious quote is one that deviates substantially from prevailing market prices and could indicate a reporting error by an exchange or some other trading issue. Because quotes flagged as suspicious are actual quotes reported by the exchanges, the algorithm does not remove them from the database but simply flags them. Moreover, the trading robot itself detects suspicious quotes in real time. It is possible for the broker’s computer systems to send an incorrect quote. For example, rather than sending $8.00, the quote may temporarily be sent as $80.00. The trading robot calculates the percentage move each time quotes are retrieved and will temporarily halt trading until the quote can be automatically confirmed.</p>
+
+<p><b>Symbol Change Tracking</b></p>
+<p align="justify">The data has automated symbol change tracking. Thus, if a stock symbol changes for any reason, the data is automatically merged with the old data. Market events are tracked through collaboration with over a dozen trading firms and hedge funds. These special events include instances when trading of a particular symbol is halted (e.g. special announcements, SEC investigations, NASDAQ circuit breakers), and mergers and acquisitions activity.</p>
+
+<p><b>Quotes are Sequenced</b></p>
+<p align="justify">Sometimes trades are reported late by exchanges. These out-of-sequence trades can be far from the prevailing market prices at the time they are reported. Because of this, the data is filtered to remove these trades to avoid skewing the low and high of each bar. The minute resolution data files are available for all NASDAQ and NYSE listed stocks starting from January 2002 to the present.</p>
+
+<p><b>Check Realism</b></p>
+<p align="justify">The data that StepsTeam uses considers whether or not the price could be executed at the historical time for each trade.</p>
+
+<p><b>Predictable Price Patterns</b></p>
+<p align="justify">Professors Andrew W. Lo and Archie Craig MacKinlay, professors of Finance at the MIT Sloan School of Management and the University of Pennsylvania, respectively, have also presented evidence that they believe shows the random walk hypothesis to be wrong. Their book A Non-Random Walk Down Wall Street, presents a number of tests and studies that reportedly support the view that there are trends in the stock market and that the stock market is somewhat predictable. </p>
+
+<p><b>Real Time Trading Data</b></p>
+<p align="justify">As part of the testing process, StepsTeam will paper trade your robot. The robot will use the level 2 data from your broker. The buying and selling of trades is simulated without using actual money (so that there is no risk of loss). It is important to remember that while the robot may do well with all four types of data, the performance during tests does not guarantee future profits. Nonetheless, if a strategy never works in simulations, it is very unlikely to work in reality. Therefore, it is still critical to perform rigorous testing before risking real money.</p>
+
+<hr>
+<h1><span style="color:#73a241;"><b>When</b></span></h1>
+<p align="justify">The client will receive a report on how the simulated data was generated and how the historical data is curated.</p>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-bottom w3-center w3-border-top w3-opacity w3-white w3-xlarge">
+<div style="text-align: center;">
+<table style="width: 100%;">
+<tr>
+<td style="text-align: left;"><a href="step3.html" style="text-decoration:none;white-space:nowrap"><h3>&lt; back</h3></a></td>
+<td style="text-align: center;"><p class="w3-medium">Copyright 2023</p></td>
+<td style="text-align: right;"><a href="step5.html" style="text-decoration:none;white-space:nowrap"><h3>next &gt;</h3></a></td>
+</tr>
+</table>
+</div>
+</footer>
+</body>
+</html>
